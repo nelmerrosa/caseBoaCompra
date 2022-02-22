@@ -9,8 +9,8 @@ class Transboa extends Transport {
     const VALUE_KM_LESS_5_KG = 1.10;
     const VALUE_KM_MORE_5_KG = 0.01;
 
-    public function mathCost($distance, $height) {
-        if($height > 5) {
+    public function mathCost($distance, $weight) {
+        if($weight > 5) {
             $this->changeFixValue(self::FIX_VALUE_MORE_5_KG);
             $this->changeKmKgValue(self::VALUE_KM_MORE_5_KG);
         } else {
@@ -18,7 +18,7 @@ class Transboa extends Transport {
             $this->changeKmKgValue(self::VALUE_KM_LESS_5_KG);
         }
         
-        $result = $this->getFixValue() + ($heigth * $distance * $this->getKmKgValue());
+        $result = $this->getFixValue() + ($weight * $distance * $this->getKmKgValue());
         return $result;
     }
 
