@@ -7,8 +7,8 @@ class BoaDex extends Transport {
     const FIX_VALUE = 10.0;
     const KM_KG_VALUE = 0.05;
 
-    public function mathCost($distance, $height) {
-        $result = $this->getFixValue() + ($height * $distance * $this->getKmKgValue());
+    public function mathCost($distance, $weight) {
+        $result = $this->getFixValue() + ($weight * $distance * $this->getKmKgValue());
         return $result;
     }
 
