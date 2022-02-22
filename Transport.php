@@ -41,5 +41,5 @@ abstract class Transport {
         $this->kmKgValue = $value;
     }
     
-    abstract public function mathCost($distance, $height); 
+    abstract public function mathCost($distance, $weight); 
 };
