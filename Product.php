@@ -5,7 +5,7 @@
     private $id;
     private $name;
     private $distance;
-    private $height;
+    private $weight;
 
     public static function product(){
         return[
@@ -24,14 +24,14 @@
         return $this->distance;
     }
     
-    public function getHeight(){
-        return $this->height;
+    public function getWeight(){
+        return $this->weight;
     }
 
-    function __construct($id, $name, $distance, $height){
+    function __construct($id, $name, $distance, $weight){
         $this->id = $id;
         $this->name = $name;
         $this->distance = $distance;
-        $this->height = $height;
+        $this->weight = $weight;
     }
 }
