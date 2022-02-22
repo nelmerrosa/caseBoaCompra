@@ -8,7 +8,7 @@ $transport = Transport::Transports();
 foreach ($transports as $transport) {
 
     foreach ($products as $product) {
-    $cost = $transport->mathCost($product->getDistance(), $product->getHeight());
+    $cost = $transport->mathCost($product->getDistance(), $product->getWeight());
      
     $productCost = [
         //array que irá retornar os produtos com os cálculos 
