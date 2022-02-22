@@ -7,8 +7,8 @@ class BoaLog extends Transport {
     const FIX_VALUE = 4.30;
     const KM_KG_VALUE = 0.12;
 
-    public function mathCost($distance, $height) {
-        $result = $this->getFixValue() + ($height * $distance * $this->getKmKgValue());
+    public function mathCost($distance, $weight) {
+        $result = $this->getFixValue() + ($weight * $distance * $this->getKmKgValue());
         return $result;
     }
 
